@@ -6,6 +6,15 @@ This project is a port of the [Proxmox Hypervisor](https://www.proxmox.com/) on 
 
 ⚠️ Proxmox-NixOS is still **experimental** and we do not advise running it on production machines. Do it at your own risk and only if you are ready to fix issues by yourself.
 
+## Fork notes
+
+This fork currently carries temporary fixes for two issues seen on NixOS deployments:
+
+- `pveam` runtime fixes for `trustedkeys.gpg` and `sqv`
+- Proxmox ISO upload fix via a `Crypt::OpenSSL::RSA` 0.33 pin
+
+The goal is to upstream these changes when possible. Until then, consumers of this fork can use `github:Ito-69/proxmox-nixos`.
+
 ## 🚦 Supported features
 
 Proxmox-NixOS has been tested on real hardware with most basic features of Proxmox (booting VMs, user management, etc), more involved setups (clusters, HA, etc) are still under development and testing.
